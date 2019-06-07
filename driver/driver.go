@@ -35,6 +35,8 @@ type Operation struct {
 	Files map[string]string `json:"files"`
 	// Output stream for log messages from the driver
 	Out io.Writer
+	// Outputs stores outputs created by the invocation image
+	Outputs map[string]io.ByteWriter `json:"outputs"`
 }
 
 // ResolvedCred is a credential that has been resolved and is ready for injection into the runtime.
